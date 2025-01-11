@@ -1,0 +1,44 @@
+README
+
+项目简介
+本项目基于 Emotion-LLaMA [5] 的开源代码，并参考 Mertools [19] 以及 AffectGPT [18] 的相关方法，补充了局部编码器、时间编码器和全局编码器模块。我们对模型整体架构进行了优化，采用 Video-llama2 框架进行了重新训练，进一步增强了模型在情感分析任务中的性能。
+
+## 实验环境搭建
+为了复现实验结果，我们搭建了三个独立的运行环境，分别是 Emotion-LLaMA、Mertools 和 Video-llama2。以下是各个环境的详细配置文件链接。
+
+1. Mertools 环境
+Mertools 环境的配置文件可以通过以下链接获取：
+- [Mertools environment.yml](https://github.com/zeroQiaoba/MERTools/blob/master/environment.yml)
+2. Video-llama2 环境
+Video-llama2 环境的依赖文件可通过以下链接查阅：
+- [Video-llama2 requirements.txt](https://github.com/DAMO-NLP-SG/VideoLLaMA2/blob/main/requirements.txt)
+3. Emotion-LLaMA 环境
+Emotion-LLaMA 环境的详细配置文件可以访问以下链接：
+- [Emotion-LLaMA environment.yml](https://github.com/ZebangCheng/Emotion-LLaMA/blob/main/environment.yml)
+4. LLaMA2-Chat-7B 模型
+LLaMA2-Chat-7B 模型的权重可以通过以下链接获取：
+- [LLaMA2-Chat-7B 模型权重](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf)
+5. Video-llama2-AV-7B 模型
+Video-llama2-AV-7B 模型的权重可通过以下链接获取：
+- [Video-llama2-AV-7B 模型权重](https://huggingface.co/DAMO-NLP-SG/VideoLLaMA2.1-7B-AV)
+实验硬件配置
+实验运行在以下硬件环境下：
+- GPU: 8 × NVIDIA A100 GPU（每张 GPU 配备 40 GB HBM2 显存）
+- 操作系统: Ubuntu 20.04
+- 处理器: AMD EPYC 7742 多核处理器
+- 加速工具: NVIDIA CUDA Toolkit 和 CUDNN
+- 存储设备: NVMe SSD
+
+该配置能够优化深度学习模型的训练和推理性能，尤其是在大规模数据集上的快速读取与写入。
+
+数据集获取
+
+1. MER2023 数据集
+MER2023 数据集的详细说明以及获取方式可以访问以下链接：
+- [MER2023 数据集](http://www.merchallenge.cn/workshop)
+
+2. EMER 数据集
+EMER 数据集的详细信息和获取方法可以通过以下链接查阅：
+- [EMER 数据集](https://github.com/zeroQiaoba/AffectGPT)
+
+
